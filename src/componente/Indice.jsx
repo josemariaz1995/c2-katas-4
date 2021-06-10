@@ -29,13 +29,13 @@ export const Indice = () => {
   return (
     <>
       <div className="contador row py-5">{`Pagina ${pagina}`}</div>
-      <div className="row align-items-center indice">
-        <div
+      <ul className="row align-items-center indice">
+        <li
           className="col  border border-right-0"
           onClick={restarIndice}
-        >{`<<`}</div>
+        >{`<<`}</li>
         {numeros.map((numero) => (
-          <div
+          <li
             key={numero.id}
             className="col border"
             onClick={() => {
@@ -43,25 +43,10 @@ export const Indice = () => {
             }}
           >
             {numero.numero}
-          </div>
+          </li>
         ))}
-        {/* <div className="col border" onClick={display}>
-          {indice}
-        </div>
-        <div className="col border" onClick={display}>
-          {indice + 1}
-        </div>{" "}
-        <div className="col border" onClick={display}>
-          {indice + 2}
-        </div>
-        <div className="col border" onClick={display}>
-          {indice + 3}
-        </div>
-        <div className="col border" onClick={display}>
-          {indice + 4}
-        </div> */}
-        <div className="col  border " onClick={sumarIndice}>{`>>`}</div>
-      </div>
+        <li className="col  border " onClick={sumarIndice}>{`>>`}</li>
+      </ul>
     </>
   );
 };
